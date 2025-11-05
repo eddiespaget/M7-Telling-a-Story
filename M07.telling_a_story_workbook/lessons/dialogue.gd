@@ -14,15 +14,15 @@ var expressions := {
 
 var dialogue_items: Array[Dictionary] = [
 { 
-		"expression": expression["sad"],
+		"expression": expressions["sad"],
 		"text": "I'm hungry...",
 },
 {
-		"expression": expression["regular"],
+		"expression": expressions["regular"],
 		"text": "Maybe I'll order some food",
 },
 {
-		"expression": expression["happy"],
+		"expression": expressions["happy"],
 		"text": "MANGO BINGSOO!!!",
 },
 ]
