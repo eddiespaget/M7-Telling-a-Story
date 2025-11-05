@@ -1,12 +1,30 @@
 extends Control
+
 @onready var rich_text_label: RichTextLabel = %RichTextLabel
 @onready var next_button: Button = %NextButton
 @onready var  audio_stream_player: AudioStreamPlayer = %AudioStreamPlayer
+@onready var body: TextureRect = %Body
+@onready var expression: TextureRect = %Expression
 
-var dialogue_items: Array[String] = [
-	"I'm hungry",
-	"I'll stay hungry",
-	"Forever hungry",
+var expressions := {
+	"happy": preload("res://assets/emotion_happy.png"),
+	"regular": preload("res://assets/emotion_regular.png"),
+	"sad": preload("res://assets/emotion_sad.png"),
+}
+
+var dialogue_items: Array[Dictionary] = [
+{ 
+		"expression": expression["sad"],
+		"text": "I'm hungry...",
+},
+{
+		"expression": expression["regular"],
+		"text": "Maybe I'll order some food",
+},
+{
+		"expression": expression["happy"],
+		"text": "MANGO BINGSOO!!!",
+},
 ]
 
 var current_item_index := 0
@@ -16,7 +34,8 @@ func _ready() -> void:
 	next_button.pressed.connect(advance)
 func show_text() -> void:
 	var current_item := dialogue_items[current_item_index]
-	rich_text_label.text = current_item
+	rich_text_label.text = current_item["text"]
+	expression.texture = current_item["expression"]
 	rich_text_label.visible_ratio = 0.0
 	var tween := create_tween()
 	var text_appearing_duration := .7

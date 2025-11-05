@@ -47,3 +47,4 @@ func create_buttons() -> void:
 		button.pressed.connect(func() -> void:
 			expression.texture = expressions[current_expression]
 		)
+#preparing the scene
