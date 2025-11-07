@@ -20,22 +20,22 @@ var bodies := {
 var dialogue_items: Array[Dictionary] = [
 { 
 		"expression": expressions["happy"],
-		"text": "Hi!! Can I order an Oreo Milk Tea?",
+		"text": "[wave]Hi!![/wave] [shake]Can I order an Oreo Milk Tea?[/shake]",
 		"character": bodies["sophia"],
 },
 {
 		"expression": expressions["happy"],
-		"text": "Yeah for sure!",
+		"text": "[wave]Yeah for sure![/wave]",
 		"character": bodies["pink"],
 },
 {
 		"expression": expressions["regular"],
-		"text": "%50 sweetness?",
+		"text": "[tornado freq=1.0]%50 sweetness? With boba? Regular ice?[/tornado]",
 		"character": bodies["pink"],
 },
 {
 		"expression": expressions["happy"],
-		"text": "Yup",
+		"text": "[wave]Yup![/wave] That sounds about right!",
 		"character": bodies["sophia"],
 },
 ]

@@ -83,6 +83,7 @@ offset_right = -280.0
 offset_bottom = -300.0
 grow_horizontal = 2
 grow_vertical = 2
+bbcode_enabled = true
 text = "2 cheeseburgers from hawaiian drive in then 1 burger special which includes an order of fries and one drink of your choice"
 fit_content = true
 
